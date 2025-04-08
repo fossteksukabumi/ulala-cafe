@@ -1,0 +1,261 @@
+/* Home.css - Styling untuk halaman Home café */
+
+/* Reset dan styling dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styling untuk navbar - pastikan navbar selalu di atas */
+nav, .navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000; 
+  top: 0;
+  left: 0;
+  background-color: #fff; /* Tambahkan warna background sesuai kebutuhan */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper utama */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section home */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  margin-top: 80px; /* Memberikan ruang untuk navbar fixed */
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo image styling */
+.logo-img1 {
+  width: 45%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+}
+
+.logo-img1:hover {
+  transform: scale(1.02);
+}
+
+/* Content column */
+.kolom {
+  width: 50%;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Typography styling */
+.kolom h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #5c3d2e; /* Warna coklat untuk tema café */
+  font-weight: 700;
+  position: relative;
+}
+
+.kolom h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+  width: 60px;
+  background-color: #b85c38; /* Aksen warna coklat */
+}
+
+.kolom p {
+  margin: 20px 0;
+  line-height: 1.7;
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.kolom a.tbl-biru {
+  display: inline-block;
+  padding: 12px 24px;
+  color: white;
+  background-color: #b85c38;
+  border-radius: 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(184, 92, 56, 0.3);
+}
+
+.kolom a.tbl-biru:hover {
+  background-color: #5c3d2e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(92, 61, 46, 0.4);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Background decoration */
+#home:before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(184, 92, 56, 0.1);
+  top: -80px;
+  right: -80px;
+  z-index: 0;
+}
+
+#home:after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(92, 61, 46, 0.1);
+  bottom: -60px;
+  left: -60px;
+  z-index: 0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 991px) {
+  #home {
+    flex-direction: column;
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 70px; /* Sesuaikan untuk layar lebih kecil */
+  }
+  
+  .logo-img1 {
+    width: 70%;
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+  
+  .kolom {
+    width: 100%;
+  }
+  
+  .kolom h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 15px;
+  }
+  
+  #home {
+    padding: 40px 20px;
+    min-height: 60vh;
+    border-radius: 10px;
+  }
+  
+  .logo-img1 {
+    width: 80%;
+  }
+  
+  .kolom h2 {
+    font-size: 2rem;
+  }
+  
+  .kolom p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #home {
+    padding: 30px 15px;
+  }
+  
+  .logo-img1 {
+    width: 90%;
+  }
+  
+  .kolom h2 {
+    font-size: 1.8rem;
+  }
+  
+  .kolom a.tbl-biru {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.menu-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.item {
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.item img {
+  width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.item h3 {
+  margin: 10px 0 5px;
+}
+
+.item p {
+  font-size: 0.9rem;
+  color: #555;
+}
