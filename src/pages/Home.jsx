@@ -11,7 +11,7 @@ function Home() {
       <Navbar />
       <div className="wrapper">
         <section id="home">
-          <img src={homeSection.image} alt="Cafe Ulala Logo" className="logo-img1" />
+          <img src='../src/Assets/Images/nasigoreng.jpg' alt="Cafe Ulala Logo" className="logo-img1" />
           <div className="kolom">
             {parse(homeSection.content)}
           </div>
