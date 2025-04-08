@@ -14,6 +14,7 @@ import makanan6 from '../Assets/Images/smoothiebuah.jpg';
 import makanan7 from '../Assets/Images/puding.jpg';
 import makanan8 from '../Assets/Images/eskrimvanilla.jpg';
 import makanan9 from '../Assets/Images/kuebrownies.jpg';
+import logo from '../Assets/Logo/logo.png';
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
       <Navbar />
       <div className="wrapper">
         <section id="home">
-          <img src='../src/Assets/Images/nasigoreng.jpg' alt="Cafe Ulala Logo" className="logo-img1" />
+          <img src={logo} alt="Cafe Ulala Logo" className="logo-img1" />
           <div className="kolom">
             {parse(homeSection.content)}
           </div>
