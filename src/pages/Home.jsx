@@ -5,6 +5,16 @@ import { homeSection } from '../data/HomeSection'
 import '../Styles/Home.css'
 import parse from 'html-react-parser'
 
+import makanan1 from '../src/Assets/Images/nasigoreng.jpg';
+import makanan2 from '../src/Assets/Images/mieayam.jpg';
+import makanan3 from '../src/Assets/Images/sateayam.jpg';
+import makanan4 from '../src/Assets/Images/tehmanis.jpg';
+import makanan5 from '../src/Assets/Images/kopisusu.jpg';
+import makanan6 from '../src/Assets/Images/smoothiebuah.jpg';
+import makanan7 from '../src/Assets/Images/puding.jpg';
+import makanan8 from '../src/Assets/Images/eskrimvanilla.jpg';
+import makanan9 from '../src/Assets/Images/kuebrownies.jpg';
+
 function Home() {
   return (
     <>
@@ -25,17 +35,17 @@ function Home() {
           <h2>Makanan</h2>
           <div className="menu-items">
             <div className="item">
-              <img src='../src/Assets/Images/nasigoreng.jpg' alt="Nasi Goreng" />
+              <img src={makanan1} alt="Nasi Goreng" />
               <h3>Nasi Goreng</h3>
               <p>Lezat dan gurih, cocok untuk makan siang!</p>
             </div>
             <div className="item">
-              <img src='../src/Assets/Images/mieayam.jpg' alt="Mie Ayam" />
+              <img src={makanan2} alt="Mie Ayam" />
               <h3>Mie Ayam</h3>
               <p>Kenyal dan penuh rasa, favorit semua kalangan.</p>
             </div>
             <div className="item">
-              <img src='../src/Assets/Images/sateayam.jpg' alt="Sate Ayam" />
+              <img src={makanan3} alt="Sate Ayam" />
               <h3>Sate Ayam</h3>
               <p>Daging empuk dengan bumbu kacang gurih.</p>
             </div>
@@ -47,17 +57,17 @@ function Home() {
           <h2>Minuman</h2>
           <div className="menu-items">
             <div className="item">
-              <img src='../src/Assets/Images/tehmanis.jpg' alt="Es Teh Manis" />
+              <img src={makanan4} alt="Es Teh Manis" />
               <h3>Es Teh Manis</h3>
               <p>Menyegarkan dan manis alami!</p>
             </div>
             <div className="item">
-              <img src='../src/Assets/Images/kopisusu.jpg' alt="Kopi Susu" />
+              <img src={makanan5} alt="Kopi Susu" />
               <h3>Kopi Susu</h3>
               <p>Pahit dan creamy, cocok untuk pagi hari.</p>
             </div>
             <div className="item">
-              <img src='../src/Assets/Images/smoothiebuah.jpg' alt="Smoothie Buah" />
+              <img src={makanan6} alt="Smoothie Buah" />
               <h3>Smoothie Buah</h3>
               <p>Sehat dan menyegarkan dengan rasa alami buah.</p>
             </div>
@@ -69,17 +79,17 @@ function Home() {
           <h2>Desserts</h2>
           <div className="menu-items">
             <div className="item">
-              <img src='../src/Assets/Images/puding.jpg' alt="Puding Coklat" />
+              <img src={makanan7} alt="Puding Coklat" />
               <h3>Puding Coklat</h3>
               <p>Lembut, manis, dan menggoda!</p>
             </div>
             <div className="item">
-              <img src='../src/Assets/Images/eskrimvanilla.jpg' alt="Es Krim Vanilla" />
+              <img src={makanan8} alt="Es Krim Vanilla" />
               <h3>Es Krim Vanilla</h3>
               <p>Dingin dan lembut, favorit semua umur.</p>
             </div>
             <div className="item">
-              <img src='../src/Assets/Images/kuebrownies.jpg' alt="Kue Brownies" />
+              <img src={makanan9} alt="Kue Brownies" />
               <h3>Kue Brownies</h3>
               <p>Manis dan legit, cocok sebagai penutup.</p>
             </div>
