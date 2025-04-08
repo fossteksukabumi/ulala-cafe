@@ -5,15 +5,15 @@ import { homeSection } from '../data/HomeSection'
 import '../Styles/Home.css'
 import parse from 'html-react-parser'
 
-import makanan1 from '../src/Assets/Images/nasigoreng.jpg';
-import makanan2 from '../src/Assets/Images/mieayam.jpg';
-import makanan3 from '../src/Assets/Images/sateayam.jpg';
-import makanan4 from '../src/Assets/Images/tehmanis.jpg';
-import makanan5 from '../src/Assets/Images/kopisusu.jpg';
-import makanan6 from '../src/Assets/Images/smoothiebuah.jpg';
-import makanan7 from '../src/Assets/Images/puding.jpg';
-import makanan8 from '../src/Assets/Images/eskrimvanilla.jpg';
-import makanan9 from '../src/Assets/Images/kuebrownies.jpg';
+import makanan1 from '../Assets/Images/nasigoreng.jpg';
+import makanan2 from '../Assets/Images/mieayam.jpg';
+import makanan3 from '../Assets/Images/sateayam.jpg';
+import makanan4 from '../Assets/Images/tehmanis.jpg';
+import makanan5 from '../Assets/Images/kopisusu.jpg';
+import makanan6 from '../Assets/Images/smoothiebuah.jpg';
+import makanan7 from '../Assets/Images/puding.jpg';
+import makanan8 from '../Assets/Images/eskrimvanilla.jpg';
+import makanan9 from '../Assets/Images/kuebrownies.jpg';
 
 function Home() {
   return (
