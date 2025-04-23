@@ -56,7 +56,7 @@ const CartSlider = ({ isOpen, onClose, cartItems, removeFromCart, updateQuantity
     
     const message = `Halo, saya ingin memesan:%0A${itemList}%0A%0ASubtotal: Rp${subtotal.toLocaleString()}%0APajak (12%): Rp${tax.toLocaleString()}%0ATotal: Rp${total.toLocaleString()}%0A%0ANomor Meja: ${tableNumber}`;
     
-    const whatsappURL = `https://wa.me/628123131411?text=${message}`;
+    const whatsappURL = `https://wa.me/6285691625074?text=${message}`;
     
     window.open(whatsappURL, "_blank");
   };
