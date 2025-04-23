@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react"; 
+
 import {
   SliderOverlay,
   SliderContainer,
@@ -21,6 +22,7 @@ import {
 } from "./CartSlider.style";
 
 const CartSlider = ({ isOpen, onClose, cartItems, removeFromCart, updateQuantity }) => {
+  const [tableNumber, setTableNumber] = useState("");
   if (!isOpen) return null;
 
   const subtotal = cartItems.reduce(
@@ -37,6 +39,11 @@ const CartSlider = ({ isOpen, onClose, cartItems, removeFromCart, updateQuantity
   };
 
   const handleCheckout = () => {
+    if (!tableNumber.trim()) {
+      alert("Mohon isi nomor meja terlebih dahulu.");
+      return;
+    }
+
     const itemList = cartItems
         .map((item) => {
         const itemLine = `- ${item.name} (${item.quantity}x) = Rp${(
@@ -47,9 +54,9 @@ const CartSlider = ({ isOpen, onClose, cartItems, removeFromCart, updateQuantity
         })
         .join("%0A");  
     
-    const message = `Halo, saya ingin memesan:%0A${itemList}%0A%0ASubtotal: Rp${subtotal.toLocaleString()}%0APajak (12%): Rp${tax.toLocaleString()}%0ATotal: Rp${total.toLocaleString()}`;
+    const message = `Halo, saya ingin memesan:%0A${itemList}%0A%0ASubtotal: Rp${subtotal.toLocaleString()}%0APajak (12%): Rp${tax.toLocaleString()}%0ATotal: Rp${total.toLocaleString()}%0A%0ANomor Meja: ${tableNumber}`;
     
-    const whatsappURL = `https://wa.me/6289514750847?text=${message}`;
+    const whatsappURL = `https://wa.me/628123131411?text=${message}`;
     
     window.open(whatsappURL, "_blank");
   };
@@ -108,6 +115,24 @@ const CartSlider = ({ isOpen, onClose, cartItems, removeFromCart, updateQuantity
             ))}
 
             <CartSummary>
+            <div style={{ margin: "10px 0" }}>
+              <label htmlFor="tableNumber">Nomor Meja:</label>
+              <input
+                type="text"
+                id="tableNumber"
+                value={tableNumber}
+                onChange={(e) => setTableNumber(e.target.value)}
+                placeholder="Contoh: 1"
+                required
+                style={{
+                  width: "100%",
+                  padding: "8px",
+                  marginTop: "4px",
+                  borderRadius: "4px",
+                  border: "1px solid #ccc",
+                }}
+              />
+            </div>
               <p>
                 <span>Subtotal:</span>
                 <span>Rp{subtotal.toLocaleString()}</span>
